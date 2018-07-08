@@ -1,20 +1,27 @@
 backend:
   name: git-gateway
 
-media_folder: /static/files/images
-public_folder: /files/images
+media_folder: "/static/files/images"
+public_folder: "/files/images"
 
 publish_mode: editorial_workflow
 
 collections:
 
-  - name: "python"
-    label: "Python"
-    folder: "content/python"
+  - name: "about"
+    label: "About"
+    folder: "content/about"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden"}
+      - {label: "Content Type", name: "contentType", widget: "hidden", default: "about"}
+      - {label: "Path", name: "path", widget: "hidden", default: "/about"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Link", name: "link", widget: "string"}
+      - label: Members
+        name: members
+        widget: list
+        fields:
+          - {label: Photo, name: photo, widget: image }
+          - {label: Fullname, name: fullname, widget: string}
+          - {label: Position, name: position, widget: string}
