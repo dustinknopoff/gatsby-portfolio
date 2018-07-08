@@ -13,6 +13,7 @@
     "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-source-filesystem": "^1.5.39",
     "glamorous": "^4.13.1",
     "netlify-cms": "^1.9.3",
     "react-helmet": "^5.2.0"
