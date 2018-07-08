@@ -17,4 +17,4 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Link", name: "link", widget: "link"}
+      - {label: "Link", name: "link", widget: "string"}
