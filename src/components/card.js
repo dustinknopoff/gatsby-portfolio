@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./card.modules.css";
 
 export default () => (
-  <div className="card">
+  <div className={styles.card}>
     <h2>Title</h2>
     <p>Content</p>
     <a href="" className="link">
