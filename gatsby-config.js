@@ -13,6 +13,7 @@ module.exports = {
     },
     `gatsby-plugin-glamor`,
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`
   ]
 };
