@@ -8,20 +8,13 @@ publish_mode: editorial_workflow
 
 collections:
 
-  - name: "about"
-    label: "About"
-    folder: "content/about"
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Content Type", name: "contentType", widget: "hidden", default: "about"}
-      - {label: "Path", name: "path", widget: "hidden", default: "/about"}
+      - {label: "Taf", name: "tag", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - label: Members
-        name: members
-        widget: list
-        fields:
-          - {label: Photo, name: photo, widget: image }
-          - {label: Fullname, name: fullname, widget: string}
-          - {label: Position, name: position, widget: string}
+      - {label: "link", name: "link", widget: "string"}
