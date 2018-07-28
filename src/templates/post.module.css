@@ -24,3 +24,7 @@
   padding: 15px;
   align-self: flex-start;
 }
+
+.contain > a {
+  margin-bottom: 20px;
+}

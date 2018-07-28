@@ -49,3 +49,7 @@
 .link:hover {
   border: none !important;
 }
+
+.card > a {
+  margin-bottom: 20px;
+}
