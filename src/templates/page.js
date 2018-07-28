@@ -28,13 +28,17 @@ export default ({ data }) => {
 
 export const query = graphql`
   query PageQuery($tag: String!) {
-    allMarkdownRemark(filter: { frontmatter: { tag: { eq: $tag } } }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { tag: { eq: $tag } } }
+    ) {
       edges {
         node {
           frontmatter {
             tag
             title
             link
+            date
           }
           excerpt
           fields {

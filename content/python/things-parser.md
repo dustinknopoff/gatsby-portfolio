@@ -2,7 +2,7 @@
 tag: python
 title: Things 3 Parser
 link: https://github.com/dustinknopoff/tparse
-date: 7-12-2018
+date: June 12, 2018
 ---
 
 [@pdavidsonreiler](https://github.com/pdavisonreiber/Public-Drafts-Scripts/tree/master/Things%20Parser) created a natural language parser in Drafts 5 for Things 3. I was curious about how it was done and about bringing that functionality to the Mac.
