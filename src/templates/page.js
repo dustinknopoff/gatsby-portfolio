@@ -17,9 +17,7 @@ export default ({ data }) => {
             <div className={styles.card} key={node}>
               <h2>{node.frontmatter.title}</h2>
               <p>{node.excerpt}</p>
-              <a href={node.frontmatter.link} className={styles.link}>
-                Link
-              </a>
+              <a href={node.frontmatter.link}>Link</a>
             </div>
           </Link>
         ))}

@@ -21,8 +21,6 @@ export default ({ data, children }) => (
     <header className={styles.top}>
       <span className={styles.credits}>
         Made with <a href="https://www.gatsbyjs.org/">GatsbyJS</a>
-        &nbsp;and&nbsp;
-        <a href="https://www.netlifycms.org/">NetlifyCMS</a>
         <div>
           Image by{" "}
           <a href="https://unsplash.com/photos/SMJC_JJm7W4">rawpixel</a>
