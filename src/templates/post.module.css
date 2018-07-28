@@ -11,6 +11,10 @@
   /* overflow: scroll; */
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -27,8 +31,29 @@
   font-size: 18px;
   padding: 15px;
   align-self: flex-start;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  word-wrap: break-word;
 }
 
 .contain > a {
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 425px) {
+  .wrapper {
+    margin-top: 30vh;
+    margin-left: -5vw;
+  }
+
+  .contain {
+    width: 80vw;
+  }
+
+  .content {
+    width: 70vw;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    word-wrap: break-word;
+  }
 }
