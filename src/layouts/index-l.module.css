@@ -11,7 +11,7 @@ body {
   width: 95vw;
   height: 90%;
   color: #3b3b3b;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -91,4 +91,13 @@ h4 {
 
 .icons > * {
   margin-right: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
 }

@@ -13,6 +13,10 @@ export default ({ data, children }) => (
         crossorigin="anonymous"
       />
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Lato|Montserrat"
+        rel="stylesheet"
+      />
     </Helmet>
     <header className={styles.top}>
       <span className={styles.credits}>
