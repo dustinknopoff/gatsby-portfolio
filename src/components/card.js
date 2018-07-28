@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./card.modules.css";
+import styles from "./card.module.css";
 
 // export default () => (
 //   <div className={styles.card}>
@@ -11,7 +11,7 @@ import styles from "./card.modules.css";
 //   </div>
 // );
 
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
 class Card extends Component {
   render() {

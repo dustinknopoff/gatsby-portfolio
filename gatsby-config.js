@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Dustin Knopoff",
-    subtitle: "Computer Science/Design Major at Northeastern University"
+    subtitle: "Computer Science/Design Major at Northeastern University",
+    pages: ["python", "bash", "javascript", "design"]
   },
   plugins: [
     {
@@ -12,7 +13,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-glamor`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-typescript`

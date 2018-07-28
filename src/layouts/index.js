@@ -30,10 +30,13 @@ export default ({ data, children }) => (
       </span>
       <nav>
         <ul>
-          <Link to="/python">Python</Link>
-          <Link to="/bash">Bash</Link>
-          <Link to="/js">JavaScript</Link>
-          <Link to="/design">Concepts & Mockups</Link>
+          {data.site.siteMetadata.pages.map(elem => {
+            return (
+              <Link to={`/${elem}`} activeClassName={styles.active}>
+                {elem}
+              </Link>
+            );
+          })}
         </ul>
       </nav>
       <div className={styles.icons}>
@@ -68,6 +71,7 @@ export const query = graphql`
       siteMetadata {
         title
         subtitle
+        pages
       }
     }
   }

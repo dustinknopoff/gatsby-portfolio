@@ -23,6 +23,11 @@ a:hover {
   border-bottom: 1px solid black;
 }
 
+.active {
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+}
+
 .top {
   width: 100%;
   display: flex;
