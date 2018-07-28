@@ -34,6 +34,11 @@ pre {
   overflow-wrap: break-word;
   hyphens: auto;
   word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.content > p > a {
+  color: #0d328f;
 }
 
 .contain > a {
