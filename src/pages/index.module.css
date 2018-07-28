@@ -25,6 +25,10 @@
   font-size: 22px;
 }
 
+.main > p:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
 @media only screen and (max-width: 425px) {
   .main {
     margin-top: 15vh;
