@@ -24,3 +24,20 @@
   font-weight: 500;
   font-size: 22px;
 }
+
+@media only screen and (max-width: 425px) {
+  .main {
+    margin-top: 10vh;
+  }
+
+  .main > p {
+    width: 90vw;
+    margin-left: -10vw;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .main {
+    margin-top: 20vh;
+  }
+}

@@ -38,6 +38,13 @@ export default ({ data, children }) => (
         </ul>
       </nav>
       <div className={styles.icons}>
+        <Link to="/">
+          <img
+            src="https://res.cloudinary.com/dknopoff/image/upload/v1520699504/portfolio/DKLogo.png"
+            alt="Logo"
+            className={styles.moblogo}
+          />
+        </Link>
         <a href="mailto:dustinknopoff@gmail.com">
           <i className="fa fa-envelope fa-2x" />
         </a>

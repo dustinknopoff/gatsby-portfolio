@@ -53,3 +53,24 @@
 .card > a {
   margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 425px) {
+  .title {
+    margin-top: 30vh;
+    color: #a0a0a0;
+    margin-left: -5vw;
+    text-align: left;
+  }
+
+  .contain {
+    height: 50vh;
+    /* margin-left: vw; */
+    overflow-x: auto;
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 90vw;
+    min-width: 60vw;
+  }
+}
