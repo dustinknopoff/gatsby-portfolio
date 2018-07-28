@@ -12,7 +12,7 @@ export default ({ data }) => {
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
           className={styles.content}
         />
-        <a href={data.markdownRemark.link}>Check it out!</a>
+        <a href={data.markdownRemark.frontmatter.link}>Check it out!</a>
       </div>
     </div>
   );
