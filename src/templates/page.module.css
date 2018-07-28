@@ -7,9 +7,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   margin-right: 40px;
   max-width: 30vw;
   max-height: 40vh;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .card > h2 {
@@ -20,17 +25,7 @@
 .card > p {
   padding: 10px;
   padding-left: 30px;
-}
-
-.link {
-  text-align: center;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: #1b4a8a;
-}
-
-link:hover {
-  color: #bbb;
+  align-self: flex-start;
 }
 
 .contain {
@@ -48,4 +43,8 @@ link:hover {
   margin-bottom: 0;
   margin-right: 10vw;
   color: #efefef;
+}
+
+.link:hover {
+  border: none !important;
 }

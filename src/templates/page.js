@@ -13,7 +13,7 @@ export default ({ data }) => {
       </h5>
       <div className={styles.contain}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.fields.slug}>
+          <Link to={node.fields.slug} className={styles.link}>
             <div className={styles.card} key={node}>
               <h2>{node.frontmatter.title}</h2>
               <p>{node.excerpt}</p>
