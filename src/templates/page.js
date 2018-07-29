@@ -29,7 +29,7 @@ export default ({ data }) => {
 export const query = graphql`
   query PageQuery($tag: String!) {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
       filter: { frontmatter: { tag: { eq: $tag } } }
     ) {
       edges {
