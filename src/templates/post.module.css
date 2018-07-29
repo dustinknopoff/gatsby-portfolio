@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10vh;
+  margin-bottom: 15vh;
   margin-top: 10vh;
   /* overflow: scroll; */
 }
@@ -49,6 +49,19 @@ pre[class*="language-"] {
 
 .contain > a {
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1064px) {
+  .contain {
+    width: 80vw;
+  }
+
+  .content {
+    width: 70vw;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    word-wrap: break-word;
+  }
 }
 
 @media only screen and (max-width: 425px) {
