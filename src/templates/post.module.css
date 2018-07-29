@@ -12,7 +12,13 @@
 }
 
 pre {
-  white-space: pre-wrap;
+  white-space: pre-wrap !important;
+  overflow: scroll !important;
+  width: inherit;
+}
+
+pre[class*="language-"] {
+  white-space: pre-wrap !important;
 }
 
 .wrapper {

@@ -11,7 +11,7 @@ This was my attempt at porting [@pdavidsonreiler](https://github.com/pdavisonrei
 
 It was never more apparent to me how different JavaScript and Python can be then when attempting to understand [@pdavidsonreiler](https://github.com/pdavisonreiber/Public-Drafts-Scripts/tree/master/Things%20Parser) code. There are so many places where values can be inherited and mutated in JavaScript that simply don't exist in Python. In the end, I decided it would be better to use [@pdavidsonreiler](https://github.com/pdavisonreiber/Public-Drafts-Scripts/tree/master/Things%20Parser)'s parser as a launch point and not as a source of truth. This introduced me to a neat little function where one can split a string and include the delimiter.
 
-```py
+```python
 @staticmethod
     def __split_before(pattern, text) -> List[str]:
         """
@@ -42,11 +42,11 @@ There were a couple of lines in [@pdavidsonreiler](https://github.com/pdavisonre
 
 One of the key aspects I spent hours slaving over was the fact that encoding the result was not accepted by Things as valid JSON. It took days for me to realize that in Python's `urllib`, the ':' and ' ' characters are encoded differently from Swift/Things.
 
-## Make CLI-ey
+## Make it CLI-ey
 
 It turns out it's pretty simple to make a decent CLI interface for interacting with python tools.
 
-```py
+```python
 argsparsed = argparse.ArgumentParser(description='Natural Things Parser:')
     argsparsed.add_argument('-f', '--file', help='Next argument needs to be a valid file path', type=str)
     argsparsed.add_argument('-c', '--clip', help='tparse will extract text from clipboard', action='store_true')

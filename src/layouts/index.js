@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import styles from "./index-l.module.css";
 import Helmet from "react-helmet";
+import "prismjs/themes/prism-tomorrow.css";
 
 export default ({ data, children }) => (
   <div>

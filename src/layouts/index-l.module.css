@@ -115,6 +115,17 @@ h6 {
   width: 30px;
 }
 
+pre {
+  white-space: pre-wrap !important;
+  overflow: scroll !important;
+  width: inherit;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  white-space: pre-wrap !important;
+}
+
 @media only screen and (max-width: 425px) {
   .top {
     flex-direction: column;
