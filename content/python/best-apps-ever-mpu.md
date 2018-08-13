@@ -5,7 +5,6 @@ link: https://github.com/dustinknopoff/py-explore/blob/master/bestappsever-talk.
 date: Jun 21, 2018
 ---
 
-# Best Apps Ever MPU
 Someone posted [this](https://talk.macpowerusers.com/t/what-is-your-favorite-app-ever/) wonderful question on Mac Power Users Forum asking what everyone’s favorite apps ever are. There was an incredible response of over 300 people. While it was interesting scrolling through reading each person’s explanations and lists of favorite apps, I wanted a broader, faster to digest version to understand. So, I figured it wouldn’t be hard to scrape all of the posts and then find the most frequently used words.
 
 Unsurprisingly, it was a little more complicated than that. 
