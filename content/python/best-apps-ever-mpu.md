@@ -5,4 +5,52 @@ link: https://github.com/dustinknopoff/py-explore/blob/master/bestappsever-talk.
 date: Jun 21, 2018
 ---
 
-Stick in the mud.
+# Best Apps Ever MPU
+Someone posted [this](https://talk.macpowerusers.com/t/what-is-your-favorite-app-ever/) wonderful question on Mac Power Users Forum asking what everyone’s favorite apps ever are. There was an incredible response of over 300 people. While it was interesting scrolling through reading each person’s explanations and lists of favorite apps, I wanted a broader, faster to digest version to understand. So, I figured it wouldn’t be hard to scrape all of the posts and then find the most frequently used words.
+
+Unsurprisingly, it was a little more complicated than that. 
+
+## The Scraping Part
+Discourse is one of many websites that has a different layout when JavaScript is not permitted. Most important was figuring out when to stop scraping pages for use but in such way that if more posts were added it would grab those as well. Luckily when there are no more posts, the html is very sparse and includes the statement:
+> Oops! That page doesn’t exist or is private.
+
+Even easier, all of the posts are contained within a `div` with the class “post”.
+
+That leaves us with a pretty simple starting function:
+```py
+def get_all():
+    allposts = []
+    base = "https://talk.macpowerusers.com/t/what-is-your-favorite-app-ever/478?page="
+    count = 1
+    while 1:
+        r = requests.get(base + str(count)).content
+        soup = BeautifulSoup(r, 'html.parser')
+        if 'Oops! That page doesn’t exist or is private.' in soup.h1.get_text():
+            break
+        else:
+            soup = BeautifulSoup(r, 'html.parser')
+            for post in soup.find_all("div", class_="post"):
+                allposts.append(post.get_text())
+        count += 1
+    return allposts
+```
+
+## Tokenizing
+Finding the most repeated words would have been very easy if there aren’t so many words that are repeatedly used in the English language. This means I had to use a Natural Language Parsing module to filter out what’s called stop words (“a”, “the”, etc.).
+
+```py
+def tokenize(alltext):
+    all_words = nltk.tokenize.word_tokenize(alltext)
+    all_word_dist = nltk.FreqDist(w.lower() for w in all_words)
+    stopwords = nltk.corpus.stopwords.words('english')
+    counter = Counter(w.lower() for w in alltext.replace('.', '').replace(',', '').replace("'", "").split()
+                      if w not in stopwords and len(w) > 5)
+    all_word_except_stop_dist = nltk.FreqDist(
+        w.lower() for w in all_word_dist if w not in stopwords and len(w) > 5)
+    most_common = all_word_except_stop_dist.most_common(40)
+    return counter.most_common(100)
+```
+
+Even after all of that, the output is somewhat of a mess and doesn’t care whether the post was actually talking about their favorite app or if a poster repeated the use of an app name.
+
+After finishing this, I grabbed the top 10 apps from the output and posted it to the forum.
