@@ -99,4 +99,8 @@ blockquote {
     hyphens: auto;
     word-wrap: break-word;
   }
+
+  video {
+    height: 350px !important;
+  }
 }
