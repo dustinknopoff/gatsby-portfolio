@@ -20,7 +20,7 @@ export default ({ data, children }) => (
       <link
         rel="shortcut icon"
         type="image/png"
-        href="http://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/logo.ico"
+        href="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/logo.ico"
       />
       <title>Dustin Knopoff</title>
     </Helmet>
