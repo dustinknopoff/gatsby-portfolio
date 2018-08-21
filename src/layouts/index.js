@@ -13,11 +13,16 @@ export default ({ data, children }) => (
         integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous"
       />
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       <link
         href="https://fonts.googleapis.com/css?family=Lato|Montserrat"
         rel="stylesheet"
       />
+      <link
+        rel="shortcut icon"
+        type="image/png"
+        href="http://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/logo.ico"
+      />
+      <title>Dustin Knopoff</title>
     </Helmet>
     <header className={styles.top}>
       <span className={styles.credits}>
@@ -41,7 +46,7 @@ export default ({ data, children }) => (
       <div className={styles.icons}>
         <Link to="/">
           <img
-            src="https://res.cloudinary.com/dknopoff/image/upload/v1520699504/portfolio/DKLogo.png"
+            src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/logo.png"
             alt="Logo"
             className={styles.moblogo}
           />
