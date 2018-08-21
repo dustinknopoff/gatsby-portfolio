@@ -51,6 +51,25 @@ pre[class*="language-"] {
   margin-bottom: 20px;
 }
 
+.content > p > img {
+  width: 40vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+video {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+blockquote {
+  color: #919191;
+  font-style: italic;
+  text-align: right;
+}
+
 @media only screen and (max-width: 1064px) {
   .contain {
     width: 80vw;

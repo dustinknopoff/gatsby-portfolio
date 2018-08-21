@@ -1,6 +1,6 @@
 ---
 tag: python
-title: Split PDFs Programmatically
+title: Splitting PDFs
 link: https://github.com/dustinknopoff/py-explore/blob/master/splitpdfs.py
 date: Jul 7, 2018
 ---
@@ -9,7 +9,7 @@ Manipulating PDFs is quite a bit more difficult than I was expecting. Someone po
 
 Much of the difficulty I found with this was in conceptualizing how to keep track of the current page and which pdf it becomes a part of. This is what I used.
 
-```py
+```python
 # For every split option
         for index, split in enumerate(splits):
             new_file = PyPDF2.PdfFileWriter()
@@ -25,7 +25,7 @@ Much of the difficulty I found with this was in conceptualizing how to keep trac
 
 Where splits is the array generated from user input:
 
-```py
+```python
 # Get path
 path = raw_input("Which PDF would you like to split? (full path)")
 # Get name of output files

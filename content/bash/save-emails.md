@@ -63,4 +63,18 @@ It runs out there are tons and tons of different ways to convert a file into a p
 
 That left me with a quick bash script to run it on every file in location where the emails are saved to from the rule.
 
+```bash
+location=~/Downloads
+for file in $location/*.eml;
+do
+    echo $file
+    name=${file##*/}
+    noeml=${name%.eml}
+    echo "$noml"
+    mailparser -f $file -b > $location/$noeml.html
+    x=$noeml.html
+    wkhtmltopdf $location/$x $location/$noeml.pdf
+done
+```
+
 The person posing the question ended up using [CloudPull](https://www.goldenhillsoftware.com/cloudpull/) but the exploration and the fact that I figured it out for myself was sufficient for me to consider this project a success.

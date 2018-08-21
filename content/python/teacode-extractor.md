@@ -22,7 +22,7 @@ In the slack channel for TeaCode, there is a channel `#expanders` where people c
     },
 ```
 
-It’s quite portable and easy to read and understand. It is however, not as easy to understand what the expander will actually do when used. This is where the idea create a Markdown version of the descriptions of TeaCode expanders came to mind. In TeaCode entering`> {expander}` will show the expander and it’s output.
+It’s quite portable and easy to read and understand. It is however, not as easy to understand what the expander will actually do when used. This is where the idea create a Markdown version of the descriptions of TeaCode expanders came to mind. In TeaCode entering `> {expander}` will show the expander and it’s output.
 
 ## Figuring it out
 
@@ -34,7 +34,7 @@ Following the design of TeaCode bundles, my code is split into Bundles and Expan
 
 The `Bundle` class takes in a `.tcbundle` file and creates a string with a title of the extracted name, subtitle of the description and then passes all expanders to be represented by the `Expander` class.
 
-```py
+```python
 class Bundle:
     def __init__(self, file):
         self._content = json.load(file)
@@ -65,7 +65,7 @@ class Bundle:
 
 The `Expander` class then creates another string formatted for markdown including the name. The description is then checked for `> {expander}` and runs the Applescript call adding both to the output string as code snippets. The final string is then sent back and added to the Bundle’s output string.
 
-````py
+````python
 class Expander:
     def __init__(self, dictionary):
         self.name: str = dictionary['name']
@@ -132,7 +132,7 @@ class Expander:
 ~~Using the `glob` module, this is run on every `.tcbundle` in the directory.~~
 All bundles are stored in a file called `bundles.tcbundle` in the Application Support folder for TeaCode. Therefore, instead of exporting all Bundles and running this script, I decided to pull the bundles from that file.
 
-```py
+```python
 if __name__ == '__main__':
     try:
         path = os.path.expanduser('~/Library/Application Support/com.apptorium.TeaCode-dm/bundles.tcbundles')

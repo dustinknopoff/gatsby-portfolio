@@ -19,7 +19,7 @@ Even easier, all of the posts are contained within a `div` with the class “pos
 
 That leaves us with a pretty simple starting function:
 
-```py
+```python
 def get_all():
     allposts = []
     base = "https://talk.macpowerusers.com/t/what-is-your-favorite-app-ever/478?page="
@@ -41,7 +41,7 @@ def get_all():
 
 Finding the most repeated words would have been very easy if there aren’t so many words that are repeatedly used in the English language. This means I had to use a Natural Language Parsing module to filter out what’s called stop words (“a”, “the”, etc.).
 
-```py
+```python
 def tokenize(alltext):
     all_words = nltk.tokenize.word_tokenize(alltext)
     all_word_dist = nltk.FreqDist(w.lower() for w in all_words)
