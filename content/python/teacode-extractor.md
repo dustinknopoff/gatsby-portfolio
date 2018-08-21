@@ -6,6 +6,7 @@ date: Jul 28, 2018
 ---
 
 In the slack channel for TeaCode, there is a channel `#expanders` where people can share there expanders. These come in `.tcbundle` files which look something like this:
+
 ```JSON
   "expanders" : [
     {
@@ -21,12 +22,14 @@ In the slack channel for TeaCode, there is a channel `#expanders` where people c
     },
 ```
 
-It’s quite portable and easy to read and understand. It is however, not as easy to understand what the expander will actually do when used. This is where the idea create a Markdown version of the descriptions of TeaCode expanders came to mind. In TeaCode entering`> {expander}` will show the expander and it’s output. 
+It’s quite portable and easy to read and understand. It is however, not as easy to understand what the expander will actually do when used. This is where the idea create a Markdown version of the descriptions of TeaCode expanders came to mind. In TeaCode entering`> {expander}` will show the expander and it’s output.
 
 ## Figuring it out
-Originally, the plan was to 	write a simple regex/delimiter parser for the `pattern` and `output_template` but would have been incredibly complex and definitely seemed beyond what was necessary. On a whim, I’d decided to see how the developer had made the Sublime Text plugin (which is also in Python), it turned out that the returned output is received through an Applescript call.
+
+Originally, the plan was to write a simple regex/delimiter parser for the `pattern` and `output_template` but would have been incredibly complex and definitely seemed beyond what was necessary. On a whim, I’d decided to see how the developer had made the Sublime Text plugin (which is also in Python), it turned out that the returned output is received through an Applescript call.
 
 ## Organization
+
 Following the design of TeaCode bundles, my code is split into Bundles and Expanders.
 
 The `Bundle` class takes in a `.tcbundle` file and creates a string with a title of the extracted name, subtitle of the description and then passes all expanders to be represented by the `Expander` class.
@@ -61,7 +64,8 @@ class Bundle:
 ```
 
 The `Expander` class then creates another string formatted for markdown including the name. The description is then checked for `> {expander}` and runs the Applescript call adding both to the output string as code snippets. The final string is then sent back and added to the Bundle’s output string.
-```py
+
+````py
 class Expander:
     def __init__(self, dictionary):
         self.name: str = dictionary['name']
@@ -75,7 +79,10 @@ class Expander:
         # Split description on newline
         possibles = self.description.split('\n')
         # Get the first language this Expander works with
-        typer = self.langs[0]
+        try:
+            typer = self.langs[0]
+        except IndexError:
+            typer = ''
         usable = []
         # For all lines in description
         for string in possibles:
@@ -92,12 +99,13 @@ class Expander:
                     session = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                                universal_newlines=True)
                     stdout, stderr = session.communicate()
+                    # print(stdout)
                     try:
                         temp = json.loads(stdout)
                     except json.JSONDecodeError:
                         continue
                     # Format as code and code blocks
-                    usable.append(f'`{string}`\n\nwill render:\n\n')
+                    usable.append(f'`{string}`\n\nwill render:\n')
                     usable.append(f'```{typer}\n{temp["text"]}\n```')
                 else:
                     # If the line is not a expander example, make it a blockquote
@@ -110,26 +118,33 @@ class Expander:
     def to_md(self):
         result = ''
         values = self.__render()
-        print(f"Generating markdown preview for {self.name}")
+        print(f"\t{self.name} expander.")
         result += f"### {self.name}\n\nDescription:\n\n"
         for string in values:
             result += string + '\n\n'
-        result += f'Languages: {self.langs}\n\n'
+        if len(self.langs) > 0:
+            result += f'Languages: {self.langs}\n\n'
         return result
-```
+````
 
 ## Do ‘em all
-Using the `glob` module, this is run on every `.tcbundle` in the directory.
+
+~~Using the `glob` module, this is run on every `.tcbundle` in the directory.~~
+All bundles are stored in a file called `bundles.tcbundle` in the Application Support folder for TeaCode. Therefore, instead of exporting all Bundles and running this script, I decided to pull the bundles from that file.
+
 ```py
 if __name__ == '__main__':
-    # For each .tcbundle file in this directory
-    for file in glob.glob('*.tcbundle'):
-        with open(file, 'r') as f:
-            # Make into class Bundle
-            bundle = Bundle(f)
-            # Get the name and make a markdown file
-            with open(os.path.basename(file)[:-9] + '.md', 'w+') as out:
-                # Write formatted string to file
-                out.write(bundle.to_md())
-            print("Success!")
+    try:
+        path = os.path.expanduser('~/Library/Application Support/com.apptorium.TeaCode-dm/bundles.tcbundles')
+    except FileNotFoundError:
+        path = os.path.expanduser('~/Library/Application Support/com.apptorium.TeaCode-setapp/bundles.tcbundles')
+    with open(path, 'r') as f:
+        stuff = json.load(f)
+        for bund in stuff['bundles']:
+            bundle = Bundle(bund)
+            with open(f'./{bund["name"]}.tcbundle', 'w+') as tcout:
+                json.dump(bund, tcout, indent=4)
+            with open(f'./{bund["name"]}.md', 'w+') as mdout:
+                mdout.write(bundle.to_md())
+    print("Success!")
 ```

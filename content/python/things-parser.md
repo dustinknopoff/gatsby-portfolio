@@ -7,7 +7,7 @@ date: June 12, 2018
 
 This was my attempt at porting [@pdavidsonreiler](https://github.com/pdavisonreiber/Public-Drafts-Scripts/tree/master/Things%20Parser) natural language parser in Drafts 5 for Things 3 to Python. I was curious about how it was done and about bringing that functionality to the Mac.
 
-## Figuring it all
+## Figuring it all out
 
 It was never more apparent to me how different JavaScript and Python can be then when attempting to understand [@pdavidsonreiler](https://github.com/pdavisonreiber/Public-Drafts-Scripts/tree/master/Things%20Parser) code. There are so many places where values can be inherited and mutated in JavaScript that simply don't exist in Python. In the end, I decided it would be better to use [@pdavidsonreiler](https://github.com/pdavisonreiber/Public-Drafts-Scripts/tree/master/Things%20Parser)'s parser as a launch point and not as a source of truth. This introduced me to a neat little function where one can split a string and include the delimiter.
 
