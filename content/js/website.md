@@ -5,4 +5,4 @@ link: https://github.com/dustinknopoff/gatsby-portfolio
 date: July 28, 2018
 ---
 
-PDFs are _very hard_!
+Coming Soon!
