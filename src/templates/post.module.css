@@ -1,6 +1,6 @@
 .contain {
   background: rgba(255, 255, 255, 1);
-  width: 60vw;
+  width: 50vw;
   border-radius: 5px;
   /* height: 70vh; */
   display: flex;
@@ -56,12 +56,6 @@ pre[class*="language-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.content > p,
-div {
-  margin-left: 2vw;
-  margin-right: 2vw;
 }
 
 video {
