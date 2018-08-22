@@ -37,6 +37,7 @@
   .main > p {
     width: 90vw;
     margin-left: -10vw;
+    background: rgba(255, 255, 255, 1);
   }
 }
 
