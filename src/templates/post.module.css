@@ -1,6 +1,6 @@
 .contain {
   background: rgba(255, 255, 255, 1);
-  width: 50vw;
+  width: 60vw;
   border-radius: 5px;
   /* height: 70vh; */
   display: flex;
@@ -31,6 +31,12 @@ pre[class*="language-"] {
 .contain > h2 {
   font-size: 48px;
   text-align: center;
+}
+
+.contain > p,
+div {
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 .content {
