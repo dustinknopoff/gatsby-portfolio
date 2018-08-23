@@ -27,10 +27,10 @@ export default ({ data, children }) => (
     <header className={styles.top}>
       <span className={styles.credits}>
         Made with <a href="https://www.gatsbyjs.org/">GatsbyJS</a>
-        <div>
-          Image by{" "}
-          <a href="https://unsplash.com/photos/SMJC_JJm7W4">rawpixel</a>
-        </div>
+        <br />
+        Image by <a href="https://unsplash.com/photos/SMJC_JJm7W4">rawpixel</a>
+        <br />
+        and icons from <a href="https://fontawesome.com/license">fontawesome</a>
       </span>
       <nav>
         <ul>
@@ -52,13 +52,13 @@ export default ({ data, children }) => (
           />
         </Link>
         <a href="mailto:dustinknopoff@gmail.com">
-          <i className="fa fa-envelope fa-2x" />
+          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534990677/envelope-solid.svg" />
         </a>
         <a href="https://github.com/dustinknopoff">
-          <i className="fab fa-github fa-2x" />
+          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991267/github-brands.svg" />
         </a>
         <a href="https://www.linkedin.com/in/dustinknopoff">
-          <i className="fab fa-linkedin fa-2x" />
+          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991397/linkedin-brands.svg" />
         </a>
       </div>
     </header>

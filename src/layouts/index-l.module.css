@@ -101,6 +101,11 @@ h4 {
   margin-right: 10px;
 }
 
+.icons > a > img {
+  margin-top: 30px;
+  /* height: 30px; */
+}
+
 h1,
 h2,
 h3,
@@ -132,10 +137,12 @@ pre[class*="language-"] {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-left: -10vw;
+    /* margin-left: -10vw; */
     /* margin-top: 10px; */
-    height: 30vh;
+    height: 25vh;
     background-color: rgba(255196, 255, 255, 0.7);
+    left: 0;
+    right: 0;
   }
 
   .credits {
@@ -161,6 +168,11 @@ pre[class*="language-"] {
   .moblogo {
     visibility: visible;
     width: 30px !important;
-    margin-bottom: -5px;
+    /* margin-bottom: -5px; */
+  }
+
+  .icons > a > img {
+    margin-top: 0;
+    /* height: 30px; */
   }
 }
