@@ -130,6 +130,7 @@ class Expander:
 ## Do ‘em all
 
 ~~Using the `glob` module, this is run on every `.tcbundle` in the directory.~~
+
 All bundles are stored in a file called `bundles.tcbundle` in the Application Support folder for TeaCode. Therefore, instead of exporting all Bundles and running this script, I decided to pull the bundles from that file.
 
 ```python
