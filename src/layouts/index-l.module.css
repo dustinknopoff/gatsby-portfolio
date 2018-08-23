@@ -30,12 +30,15 @@ a:hover {
 
 .top {
   /* height: 100%; */
-  width: 95%;
+  width: 100%;
+  margin-top: 1vh;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: space-around;
+  /* align-items: baseline; */
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
 }
 
 .credits {
@@ -101,11 +104,6 @@ h4 {
   margin-right: 10px;
 }
 
-.icons > a > img {
-  margin-top: 30px;
-  /* height: 30px; */
-}
-
 h1,
 h2,
 h3,
@@ -169,10 +167,5 @@ pre[class*="language-"] {
     visibility: visible;
     width: 30px !important;
     /* margin-bottom: -5px; */
-  }
-
-  .icons > a > img {
-    margin-top: 0;
-    /* height: 30px; */
   }
 }
