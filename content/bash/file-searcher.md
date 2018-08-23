@@ -32,10 +32,10 @@ infile() {
 
 `notes()` runs ripgrep on the input and pipes it through fzf. Upon selection, the selection is parsed for it's file path and sent to my preferred markdown editor.
 
-I then modified `fo` to recognize `ctrl-w` as a command to send to `infile()` and `ctrl-p` as a command to copy the file path to the clipboard.
+I then modified ~~`fo`~~ `fs` to recognize `ctrl-w` as a command to send to ~~`notes()`~~ `infile()` and `ctrl-p` as a command to copy the file path to the clipboard.
 
 ```bash
-fo() {
+fs() {
   local out file key
   IFS=$'\n' out=($(fzf --preview="pygmentize -g {}" --query="$1" --exit-0 --expect=ctrl-o,ctrl-e,ctrl-w,ctrl-m,ctrl-p --bind '?:toggle-preview'))
   key=$(head -1 <<< "$out")
@@ -49,6 +49,6 @@ fo() {
 Here's a short video showing it in action. This is searching all of my notes exported from Bear (339 to be exact).
 
 <video height="350" controls>
-  <source src="https://res.cloudinary.com/dknopoff/video/upload/f_auto/v1534890712/fo.mov" type="video/mp4">
+  <source src="https://res.cloudinary.com/dknopoff/video/upload/f_auto/v1534890712/fs.mov" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
