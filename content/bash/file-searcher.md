@@ -32,7 +32,7 @@ infile() {
 
 `notes()` runs ripgrep on the input and pipes it through fzf. Upon selection, the selection is parsed for it's file path and sent to my preferred markdown editor.
 
-I then modified ~~ `fo` ~~ `fs` to recognize `ctrl-w` as a command to send to ~~ `notes()` ~~ `infile()` and `ctrl-p` as a command to copy the file path to the clipboard.
+I then modified `fs` to recognize `ctrl-w` as a command to send to `infile()` and `ctrl-p` as a command to copy the file path to the clipboard.
 
 ```bash
 fs() {
