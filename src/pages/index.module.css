@@ -8,8 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 95vw;
-  height: 80vh;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
 }
 
@@ -36,8 +36,8 @@
 
   .main > p {
     width: 90vw;
-    margin-left: -10vw;
-    background: rgba(255, 255, 255, 1);
+    /* margin-left: -10vw; */
+    background: rgba(255, 255, 255, 0.9);
   }
 }
 
