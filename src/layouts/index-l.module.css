@@ -20,7 +20,8 @@ a {
 }
 
 a:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #595959;
+  color: #595959;
 }
 
 .active {
