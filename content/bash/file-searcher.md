@@ -55,6 +55,6 @@ fs() {
 Here's a short video showing it in action. This is searching all of my notes exported from Bear (339 to be exact).
 
 <video height="350" controls>
-  <source src="https://res.cloudinary.com/dknopoff/video/upload/f_auto/v1534890712/fs.mov" type="video/mp4">
+  <source src="https://res.cloudinary.com/dknopoff/video/upload/f_auto/v1534890712/fo.mov" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
