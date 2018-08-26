@@ -26,7 +26,8 @@ This acheived one aspect I was looking for which was opening into an editor on s
 
 ```bash
 infile() {
-  rg "$1" | fzf --height 40% | xargs -0 python -c "import re;import sys;arr=sys.argv;string=' '.join(arr);print(re.findall(r'(?<=-c ).*(?=:)',string)[0].replace(' ', '\ ').replace('&', '\&'))" | xargs -0 -I {} /bin/zsh -c "echo '$(pwd | sed -e 's/ /\\ /g')/{}'" | xargs -0 -I {} /bin/zsh -c 'code {}'
+  # rg "$1" | fzf --height 40% | xargs -0 python -c "import re;import sys;arr=sys.argv;string=' '.join(arr);print(re.findall(r'(?<=-c ).*(?=:)',string)[0].replace(' ', '\ ').replace('&', '\&'))" | xargs -0 -I {} /bin/zsh -c "echo '$(pwd | sed -e 's/ /\\ /g')/{}'" | xargs -0 -I {} /bin/zsh -c 'code {}' - Old version
+  rg "$1" | fzf --height 40% | sed 's/:.*$//g' | sed 's/ /\\ /g' | sed 's/&/\\&/g' | xargs -0 -I {} /bin/zsh -c 'code {}' # Much cleaner version
 }
 ```
 
