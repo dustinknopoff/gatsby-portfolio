@@ -44,11 +44,16 @@ I then modified `fs` to recognize `ctrl-w` as a command to send to `infile()` an
 # - CTRL-D to cd to directory of file
 fs() {
   local out file key
-  IFS=$'\n' out=($(fzf --preview="pygmentize -g {}" --query="$1" --exit-0 --expect=ctrl-o,ctrl-e,ctrl-w,ctrl-m,ctrl-p,ctrl-d --bind '?:toggle-preview'))
+  IFS=$'\n' out=($(fzf -i --preview="pygmentize -g {}" --query="$1" --exit-0 --expect=ctrl-o,ctrl-e,ctrl-w,ctrl-m,ctrl-p,ctrl-d,ctrl-x --bind '?:toggle-preview'))
   key=$(head -1 <<< "$out")
   file=$(head -2 <<< "$out" | tail -1)
+  esfile=$(printf %q "$file")
   if [ -n "$file" ]; then
-    [ "$key" = ctrl-o ] && open "$file" || [ "$key" = ctrl-w ] && infile "$1" || [ "$key" = ctrl-p ] && echo "$file" | pbcopy || [ "$key" = ctrl-d ] && cd $(dirname "$file") || ${EDITOR:-code} "$file"
+    [ "$key" = ctrl-o ] && open "$file" ||
+    [ "$key" = ctrl-w ] && infile "$1" ||
+    [ "$key" = ctrl-p ] && echo "$file" | pbcopy ||
+    [ "$key" = ctrl-d ] && cd $(dirname "$file") ||
+    ${EDITOR:-code} "$file"
   fi
 }
 ```
