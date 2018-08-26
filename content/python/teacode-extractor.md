@@ -149,3 +149,7 @@ if __name__ == '__main__':
                 mdout.write(bundle.to_md())
     print("Success!")
 ```
+
+#### Update
+
+After using this script every couple new expanders I've made, I realized it was incredibly unnecessary to recreate every single file. Instead, if there is a change detected, only that Bundle is re-rendered in Markdown. Additionally, with more and more expanders in a single Bundle, I realized a Table of Contents would be very convenient. So, it's there now.
