@@ -152,4 +152,4 @@ if __name__ == '__main__':
 
 #### Update
 
-After using this script every couple new expanders I've made, I realized it was incredibly unnecessary to recreate every single file. Instead, if there is a change detected, only that Bundle is re-rendered in Markdown. Additionally, with more and more expanders in a single Bundle, I realized a Table of Contents would be very convenient. So, it's there now.
+After using this script every couple new expanders I've made, I realized it was incredibly unnecessary to recreate every single file. Instead, if there is a change detected, only that Bundle is re-rendered in Markdown. Additionally, with more and more expanders in a single Bundle, I realized a Table of Contents would be very convenient. So, it's there now. The link below will always have the most current version.
