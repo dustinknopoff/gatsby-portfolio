@@ -29,7 +29,7 @@
   background: rgba(255, 255, 255, 1);
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 650px) {
   .main {
     margin-top: 15vh;
   }
