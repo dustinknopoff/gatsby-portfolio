@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 export default () => (
   <div className={styles.main}>
     <img
-      src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1523893789/profile.jpg"
+      src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1523893789/portfolio/profile.jpg"
       alt="profile-img"
     />
     <p>

@@ -56,6 +56,6 @@ Here's a quick video of it in action:
 
 <video width="400" controls>
 
-  <source src="https://res.cloudinary.com/dknopoff/video/upload/f_auto/v1534896474/moneybuddy.mov" type="video/mp4">
+  <source src="https://res.cloudinary.com/dknopoff/video/upload/f_auto/v1534896474/portfolio/moneybuddy.mov" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>

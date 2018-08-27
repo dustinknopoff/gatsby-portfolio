@@ -20,7 +20,7 @@ export default ({ data, children }) => (
       <link
         rel="shortcut icon"
         type="image/png"
-        href="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/logo.ico"
+        href="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/portfolio/logo.ico"
       />
       <title>Dustin Knopoff</title>
     </Helmet>
@@ -46,19 +46,19 @@ export default ({ data, children }) => (
       <div className={styles.icons}>
         <Link to="/">
           <img
-            src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/logo.png"
+            src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/portfolio/logo.png"
             alt="Logo"
             className={styles.moblogo}
           />
         </Link>
         <a href="mailto:dustinknopoff@gmail.com">
-          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534990677/envelope-solid.svg" />
+          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534990677/portfolio/envelope-solid.svg" />
         </a>
         <a href="https://github.com/dustinknopoff">
-          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991267/github-brands.svg" />
+          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991267/portfolio/github-brands.svg" />
         </a>
         <a href="https://www.linkedin.com/in/dustinknopoff">
-          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991397/linkedin-brands.svg" />
+          <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991397/portfolio/linkedin-brands.svg" />
         </a>
       </div>
     </header>
