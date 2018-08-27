@@ -5,12 +5,12 @@
   /* min-width: 400px;
   min-height: 300px; */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* flex-direction: column; */
+  justify-content: center;
   align-items: center;
-  margin-right: 40px;
+  margin-bottom: 40px;
   width: 40vw;
-  height: 25vh;
+  height: 20vh;
 }
 
 .card:hover {
@@ -27,7 +27,8 @@
 .card > p {
   padding: 10px;
   padding-left: 30px !important;
-  align-self: flex-start;
+  padding-right: 30px !important;
+  align-self: center;
   /* font-size: 18px; */
 }
 
@@ -35,8 +36,9 @@
   display: flex;
   align-items: center;
   height: 75vh;
-  margin-left: 10vw;
-  overflow-x: auto;
+  margin-bottom: 10vw;
+  /* overflow-x: auto; */
+  flex-direction: column;
 }
 
 .title {
@@ -54,14 +56,14 @@
 }
 
 .card > a {
-  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 @media only screen and (max-width: 425px) {
   .title {
     margin-top: 30vh;
     color: #a0a0a0;
-    margin-left: -5vw;
+    /* margin-left: -5vw; */
     text-align: left;
   }
 
@@ -78,5 +80,11 @@
     height: 40vh;
     margin: 10px;
     /* margin-left: -10vw; */
+    flex-direction: column;
+  }
+
+  .card > a {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
