@@ -62,20 +62,4 @@ Output:
 [('favorite', 47), ('1password', 40), ('really', 31), ('alfred', 30), ('drafts', 30), ('omnifocus', 27), ('things', 24), ('windows', 20), ('without', 19), ('workflow',19), ('always', 19), ('probably', 17), ('evernote', 16), ('second', 16), ('keyboard', 15), ('onenote', 15), ('program', 15), ('powerful', 15), ('overcast', 14), ('filemaker', 14), ('computer', 13), ('favourite', 13), ('system', 13), ('useful', 13), ('software', 12), ('textexpander', 12), ('devonthink', 12), ('writing', 11), ('there’s', 11), ('features', 11), ('that’s', 10), ('better', 10), ('maestro', 10), ('machine', 10), ('remember', 10), ('everything', 10), ('doesn’t', 10), ('however', 9), ('screen', 9), ('changed', 9), ('environment', 9), ('ulysses', 9), ('scrivener', 9), ('simple', 9), ('around', 9), ('terminal', 9), etc.
 ```
 
-After finishing this, I grabbed the top 10 apps from the output and posted it to the forum like so:
-    
-| |App|Votes|
-|---|---|---|
-|1| 1Password | 37|
-|2| Alfred | 28|
-|3| Drafts | 26 |
-|4|Omnifocus|23|
-|5| Workflow | 17|
-|6|Things|16|
-|7|Evernote|14|
-|8|Keyboard Maestro | 13|
-|9| OneNote | 12|
-|9| FileMaker | 12|
-|9| Devonthink | 12|
-|9| Overcast | 12|
-|10|TextExpander|11|
+After finishing this, I grabbed the top 10 apps from the output and posted it to the forum.
