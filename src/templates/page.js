@@ -1,10 +1,19 @@
 import React from "react";
 import styles from "./page.module.css";
 import Link from "gatsby-link";
+import Helmet from "react-helmet";
 
 export default ({ data }) => {
   return (
     <div>
+      <Helmet
+        title={
+          data.allMarkdownRemark.edges[0].node.frontmatter.tag
+            .charAt(0)
+            .toUpperCase() +
+          data.allMarkdownRemark.edges[0].node.frontmatter.tag.slice(1)
+        }
+      />
       <h5 className={styles.title}>
         {data.allMarkdownRemark.edges[0].node.frontmatter.tag
           .charAt(0)

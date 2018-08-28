@@ -23,6 +23,11 @@ export default ({ data, children }) => (
         href="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/portfolio/logo.ico"
       />
       <title>Dustin Knopoff</title>
+      <meta name="author" content="Dustin Knopoff" />
+      <meta
+        name="description"
+        content="Projects and Information on Dustin Knopoff"
+      />
     </Helmet>
     <header className={styles.top}>
       <span className={styles.credits}>

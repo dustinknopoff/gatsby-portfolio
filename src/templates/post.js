@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./post.module.css";
+import Helmet from "react-helmet";
 
 export default ({ data }) => {
   return (
     <div className={styles.wrapper}>
+      <Helmet title={data.markdownRemark.frontmatter.title} />
       <div className={styles.contain}>
         <h2 className={styles.title}>
           {data.markdownRemark.frontmatter.title}
