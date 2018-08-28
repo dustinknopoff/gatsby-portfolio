@@ -41,7 +41,7 @@ export default ({ data, children }) => (
         <ul>
           {data.site.siteMetadata.pages.map(elem => {
             return (
-              <Link to={`/${elem}`} activeClassName={styles.active}>
+              <Link to={`/${elem}`} activeClassName={styles.active} key={elem}>
                 {elem}
               </Link>
             );
