@@ -88,7 +88,6 @@ module.exports = {
                   html
                   frontmatter {
                     date
-                    link
                     title
                   }
                 }
