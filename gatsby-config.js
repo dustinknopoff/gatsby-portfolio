@@ -53,49 +53,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-typescript`,
-    {
-      resolve: "gatsby-plugin-feed-generator",
-      options: {
-        generator: `GatsbyJS`,
-        rss: true, // Set to false to stop rss generation
-        json: true, // Set to false to stop json feed generation
-        siteQuery: `
-        {
-          site {
-            siteMetadata {
-              title
-              description
-              siteUrl
-              author
-            }
-          }
-        }
-      `,
-        // The plugin requires frontmatter of date, path(or slug/url), and title at minimum
-        feedQuery: `
-          {
-            allMarkdownRemark(
-              sort: {order: DESC, fields: [frontmatter___date]}, 
-              limit: 100, 
-              
-              ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  html
-                  frontmatter {
-                    date
-                    title
-                  }
-                }
-              }
-            }
-          }
-          `
-      }
-    }
+    `gatsby-plugin-typescript`
   ]
 };
