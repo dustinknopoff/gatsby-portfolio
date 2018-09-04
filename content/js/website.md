@@ -25,4 +25,4 @@ I'd also found NetlifyCMS, essentially a GUI backend for markdown based posts fo
 
 > Current iteration
 
-Most importantly, my website is now for my projects and not a glorified resume. It allows me to present a slightly more verbose representation of the contents I make public on Github.
+Most importantly, my website is now for my projects and not a glorified resume. It allows me to present a more verbose representation of the contents I make public on Github.
