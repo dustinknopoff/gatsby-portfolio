@@ -7,14 +7,14 @@ date: Jul 28, 2018
 
 In the slack channel for TeaCode, there is a channel `#expanders` where people can share there expanders. These come in `.tcbundle` files which look something like this:
 
-```JSON
+```js
   "expanders" : [
     {
       "name" : "Function",
       "is_enabled" : true,
       "description" : "Creates default function statement.\n> fn do arr\n\n\n> fn do",
       "supported_languages" : [
-        "Python”
+        "Python"
       ],
       "pattern" : "fn ${name:word}| ${params:text?}|",
       "output_template" : "def ${name.snakecase}(|${params.snakecase}|):\n\t#",
