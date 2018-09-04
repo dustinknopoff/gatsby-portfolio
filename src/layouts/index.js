@@ -70,7 +70,7 @@ export default ({ data, children }) => (
     <Link to="/">
       <footer>
         <img
-          src="https://res.cloudinary.com/dknopoff/image/upload/v1520699504/portfolio/DKLogo.png"
+          src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1520699504/portfolio/DKLogo.png"
           alt="Logo"
         />
         <h1>{data.site.siteMetadata.title}</h1>
