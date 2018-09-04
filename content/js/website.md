@@ -21,4 +21,8 @@ Discovering Gatsby meant that I could continue to have the speed I had from stat
 
 I'd also found NetlifyCMS, essentially a GUI backend for markdown based posts for a website. I'd attempted to use it but kept getting errors. In the end, I couldn't figure it out and decided just adding files was sufficient.
 
+![Current Website](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1536024150/portfolio/curr-website.png)
+
+> Current iteration
+
 Most importantly, my website is now for my projects and not a glorified resume. It allows me to present a slightly more verbose representation of the contents I make public on Github.
