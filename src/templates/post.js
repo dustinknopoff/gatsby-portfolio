@@ -10,10 +10,12 @@ export default ({ data }) => {
         <h2 className={styles.title}>
           {data.markdownRemark.frontmatter.title}
         </h2>
-        <div
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-          className={styles.content}
-        />
+        <article>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            className={styles.content}
+          />
+        </article>
         <a href={data.markdownRemark.frontmatter.link}>Check it out!</a>
       </div>
     </div>
