@@ -1,16 +1,19 @@
 import React from "react";
 import styles from "./index.module.css";
+import Layout from "../components/layout";
 
 export default () => (
-  <div className={styles.main}>
-    <img
-      src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1523893789/portfolio/profile.jpg"
-      alt="profile-img"
-    />
-    <p>
-      Hi! My name is Dustin. I'm a Computer Science and Design major at
-      Northeastern University. I love to fiddle with projects and ideas. Come
-      check them out!
-    </p>
-  </div>
+  <Layout>
+    <div className={styles.main}>
+      <img
+        src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1523893789/portfolio/profile.jpg"
+        alt="profile-img"
+      />
+      <p>
+        Hi! My name is Dustin. I'm a Computer Science and Design major at
+        Northeastern University. I love to fiddle with projects and ideas. Come
+        check them out!
+      </p>
+    </div>
+  </Layout>
 );
