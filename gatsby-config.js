@@ -54,6 +54,19 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-typescript`
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lato`
+          },
+          {
+            family: `Montserrat`
+          }
+        ]
+      }
+    }
   ]
 };

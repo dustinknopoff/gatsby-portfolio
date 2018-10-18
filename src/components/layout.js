@@ -22,16 +22,6 @@ export default ({ children }) => (
       <div>
         <Helmet>
           <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-            integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
-            crossorigin="anonymous"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Lato|Montserrat"
-            rel="stylesheet"
-          />
-          <link
             rel="shortcut icon"
             type="image/png"
             href="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/portfolio/logo.ico"
@@ -40,6 +30,7 @@ export default ({ children }) => (
           <meta
             name="keywords"
             content="design, programming, student, exploration"
+            description="Dustin Knopoff's portfolio of projects"
           />
         </Helmet>
         <header className={styles.top}>
@@ -76,13 +67,22 @@ export default ({ children }) => (
               />
             </Link>
             <a href="mailto:dustinknopoff@gmail.com">
-              <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534990677/portfolio/envelope-solid.svg" />
+              <img
+                alt="envelope icon"
+                src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534990677/portfolio/envelope-solid.svg"
+              />
             </a>
             <a href="https://github.com/dustinknopoff">
-              <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991267/portfolio/github-brands.svg" />
+              <img
+                alt="github icon"
+                src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991267/portfolio/github-brands.svg"
+              />
             </a>
             <a href="https://www.linkedin.com/in/dustinknopoff">
-              <img src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991397/portfolio/linkedin-brands.svg" />
+              <img
+                alt="linkedin icon"
+                src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534991397/portfolio/linkedin-brands.svg"
+              />
             </a>
           </div>
         </header>
@@ -90,6 +90,7 @@ export default ({ children }) => (
         <Link to="/">
           <footer>
             <img
+              alt="logo"
               src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1520699504/portfolio/DKLogo.png"
               alt="Logo"
             />
