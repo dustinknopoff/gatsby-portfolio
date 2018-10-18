@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Dustin Knopoff",
     subtitle: "Computer Science/Design Major at Northeastern University",
-    pages: ["python", "bash", "javascript", "design"],
+    pages: ["python", "bash", "javascript", "design", "rust"],
     author: "Dustin Knopoff",
     description: "Projects and Information on Dustin Knopoff",
     siteUrl: "https://dustinknopoff.me"
@@ -46,7 +46,8 @@ module.exports = {
               aliases: {
                 sh: "bash",
                 js: "javascript",
-                py: "python"
+                py: "python",
+                rs: "rust"
               }
             }
           }
