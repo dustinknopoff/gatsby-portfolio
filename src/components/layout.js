@@ -4,6 +4,7 @@ import styles from "./layout.module.css";
 import Helmet from "react-helmet";
 import "prismjs/themes/prism-tomorrow.css";
 import { StaticQuery, graphql } from "gatsby";
+import Obfuscate from "react-obfuscate";
 
 export default ({ children }) => (
   <StaticQuery
@@ -66,12 +67,12 @@ export default ({ children }) => (
                 className={styles.moblogo}
               />
             </Link>
-            <a href="mailto:dustinknopoff@gmail.com">
+            <Obfuscate email="dustinknopoff@gmail.com">
               <img
                 alt="envelope icon"
                 src="https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_30/v1534990677/portfolio/envelope-solid.svg"
               />
-            </a>
+            </Obfuscate>
             <a href="https://github.com/dustinknopoff">
               <img
                 alt="github icon"

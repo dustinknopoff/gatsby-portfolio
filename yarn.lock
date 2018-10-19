@@ -9151,6 +9151,11 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-obfuscate@^2.1.10:
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/react-obfuscate/-/react-obfuscate-2.1.10.tgz#a6a34b9c685d1f5d9c82368ba165b4fa208c4016"
+  integrity sha512-Zj9STqALCukQ6icBq/sw4hdd9QCnEoOmYZIUdCxmtqx5mUGKkUe5eICxuurqHFIP1fmkTeOdBMAzCqXaUtXo9g==
+
 react-side-effect@^1.1.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"
