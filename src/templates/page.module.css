@@ -33,10 +33,11 @@
 }
 
 .contain {
+  margin-top: 20vh;
   display: flex;
   align-items: center;
-  height: 75vh;
-  margin-bottom: 10vw;
+  /* height: 75vh; */
+  margin-bottom: 15vh;
   /* overflow-x: auto; */
   flex-direction: column;
 }
@@ -49,6 +50,8 @@
   margin-right: 10vw;
   color: #636363;
   font-family: "Courier New", Courier, monospace;
+  position: fixed;
+  right: 0;
 }
 
 .link:hover {
