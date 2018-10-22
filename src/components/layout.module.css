@@ -32,7 +32,7 @@ a:hover {
 .top {
   /* height: 100%; */
   width: 100%;
-  margin-top: 1vh;
+  /* margin-top: 1vh; */
   display: flex;
   justify-content: space-around;
   /* align-items: baseline; */
@@ -41,11 +41,13 @@ a:hover {
   left: 0;
   right: 0;
   padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .credits {
   font-size: 10px;
   color: #3b3b3b;
+  margin-top: 1vh;
 }
 
 .credits > div {
@@ -104,6 +106,10 @@ h4 {
 
 .icons > * {
   margin-right: 10px;
+}
+
+.icons {
+  padding-top: 1vh;
 }
 
 h1,
