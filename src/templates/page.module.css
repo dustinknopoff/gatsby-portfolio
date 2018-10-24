@@ -9,8 +9,8 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-  width: 40vw;
-  height: 20vh;
+  width: 50vw;
+  /* height: 20vh; */
 }
 
 .card:hover {
@@ -33,7 +33,7 @@
 }
 
 .contain {
-  margin-top: 20vh;
+  margin-top: 15vh;
   display: flex;
   align-items: center;
   /* height: 75vh; */
@@ -44,14 +44,12 @@
 
 .title {
   text-align: right;
-  margin-top: 5vh;
+  margin-top: 15vh;
   font-size: 60px;
   margin-bottom: 0;
   margin-right: 10vw;
   color: #636363;
   font-family: "Courier New", Courier, monospace;
-  position: fixed;
-  right: 0;
 }
 
 .link:hover {

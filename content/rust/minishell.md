@@ -5,8 +5,6 @@ link: https://github.com/dustinknopoff/rust-minishell
 date: Oct 16, 2018
 ---
 
-# Building a Mini Shell in Rust
-
 > Disclaimer: I'm sure there is a much more elegant way to do this.
 
 There are 4 parts to a shell:
