@@ -78,7 +78,7 @@
 
   .card {
     width: 70vw;
-    height: 40vh;
+    /* height: 40vh; */
     margin: 10px;
     /* margin-left: -10vw; */
     flex-direction: column;

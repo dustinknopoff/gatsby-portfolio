@@ -36,11 +36,10 @@ export default ({ children }) => (
         </Helmet>
         <header className={styles.top}>
           <span className={styles.credits}>
-            Made with <a href="https://www.gatsbyjs.org/">GatsbyJS</a>
-            <br />
+            Made with <a href="https://www.gatsbyjs.org/">GatsbyJS</a> {", "}
             Image by{" "}
             <a href="https://unsplash.com/photos/SMJC_JJm7W4">rawpixel</a>
-            <br />
+            {", "}
             and icons from{" "}
             <a href="https://fontawesome.com/license">fontawesome</a>
           </span>

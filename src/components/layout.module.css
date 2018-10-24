@@ -48,6 +48,7 @@ a:hover {
   font-size: 10px;
   color: #3b3b3b;
   margin-top: 2vh;
+  width: 15vw;
 }
 
 .credits > div {
@@ -57,6 +58,7 @@ a:hover {
 nav > ul > * {
   margin-right: 20px;
   margin-left: 20px;
+  padding: 0;
   text-decoration: none;
   color: #3b3b3b;
 }
@@ -139,13 +141,13 @@ pre[class*="language-"] {
 
 @media only screen and (max-width: 650px) {
   .top {
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: baseline;
     align-items: center;
     width: 100%;
     /* margin-left: -10vw; */
     /* margin-top: 10px; */
-    height: 25vh;
+    height: 20vh;
     background-color: rgba(255196, 255, 255, 0.7);
     left: 0;
     right: 0;
@@ -154,13 +156,22 @@ pre[class*="language-"] {
 
   .credits {
     margin-top: 10px;
+    margin-left: 10px;
+    width: 20vw;
+  }
+
+  .icons {
+    width: 30vw;
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    padding: 0;
     color: #efefef;
+  }
+
+  ul > * {
+    padding: 0 !important;
   }
 
   /* html,
