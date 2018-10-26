@@ -1,7 +1,7 @@
 ---
 tag: rust
 title: Documenting User Bash Functions
-link: https://github.com/dustinknopoff/bashdoc
+link: https://github.com/dustinknopoff/bashdoc/tree/74643ae4d211d45df5d8f2b725f04aa448e2d335
 date: Oct 24, 2018
 ---
 
