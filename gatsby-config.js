@@ -71,6 +71,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-feed`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-catch-links`
   ]
 };

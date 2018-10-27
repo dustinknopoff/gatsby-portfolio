@@ -15,6 +15,7 @@
     "feather-icons": "^4.7.3",
     "gatsby": "^2.0.22",
     "gatsby-cli": "^2.4.3",
+    "gatsby-plugin-catch-links": "^2.0.5",
     "gatsby-plugin-feed": "^2.0.8",
     "gatsby-plugin-feed-generator": "^1.0.6",
     "gatsby-plugin-glamor": "^2.0.5",
