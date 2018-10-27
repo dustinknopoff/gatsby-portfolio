@@ -6,6 +6,7 @@ import "prismjs/themes/prism-tomorrow.css";
 import { StaticQuery, graphql } from "gatsby";
 import Obfuscate from "react-obfuscate";
 import { Mail, GitHub, Linkedin, Rss } from "react-feather";
+import styled from "styled-components";
 
 export default ({ children }) => (
   <StaticQuery
@@ -44,32 +45,33 @@ export default ({ children }) => (
             description="Dustin Knopoff's portfolio of projects"
           />
         </Helmet>
-        <header className={styles.top}>
-          <span className={styles.credits}>
+        <Header>
+          <Credits>
             Made with <a href="https://www.gatsbyjs.org/">GatsbyJS</a> {", "}
             Image by{" "}
             <a href="https://unsplash.com/photos/SMJC_JJm7W4">rawpixel</a>
             {", "}
             and icons from <a href="https://feathericons.com">feather</a>
-          </span>
+          </Credits>
           <nav>
-            <ul>
+            <NavList>
               {data.site.siteMetadata.pages.map(elem => {
                 return (
-                  <Link
+                  <StyledLink
+                    as={Link}
                     to={`/${elem}`}
                     activeClassName={styles.active}
                     key={elem}
                   >
                     {elem}
-                  </Link>
+                  </StyledLink>
                 );
               })}
-            </ul>
+            </NavList>
           </nav>
-          <div className={styles.icons}>
+          <Icons>
             <Link to="/">
-              <img
+              <MobLogo
                 src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534895152/portfolio/logo.png"
                 alt="Logo"
                 className={styles.moblogo}
@@ -87,21 +89,163 @@ export default ({ children }) => (
             <Link to="rss.xml">
               <Rss />
             </Link>
-          </div>
-        </header>
+          </Icons>
+        </Header>
         {children}
         <Link to="/">
-          <footer>
-            <img
+          <Footer>
+            <FooterImage
               alt="logo"
               src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1520699504/portfolio/DKLogo.png"
               alt="Logo"
             />
             <h1>{data.site.siteMetadata.title}</h1>
             <h4>{data.site.siteMetadata.subtitle}</h4>
-          </footer>
+          </Footer>
         </Link>
       </div>
     )}
   />
 );
+
+const StyledLink = styled.a`
+  color: inherit;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 0;
+  text-decoration: none;
+  color: #3b3b3b;
+
+  &:hover {
+    border-bottom: 1px solid #595959;
+    color: #595959;
+  }
+
+  &:active {
+    font-weight: 600;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: #efefef;
+    &:hover {
+      border-bottom: 1px solid #efefef;
+      color: #efefef;
+    }
+  }
+`;
+
+const Header = styled.header`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  @media only screen and (max-width: 650px) {
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(54, 56, 58, 0.7);
+    color: #efefef;
+  }
+`;
+
+const Credits = styled.span`
+  font-size: 10px;
+  color: #3b3b3b;
+  margin-top: 2vh;
+  width: 15vw;
+
+  @media only screen and (max-width: 650px) {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 20vw;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: #efefef;
+  }
+`;
+
+const Footer = styled.footer`
+  display: flex;
+  align-items: baseline;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    360deg,
+    #c4c4c4 0%,
+    rgba(196, 196, 196, 0.839779) 16.02%,
+    rgba(196, 196, 196, 0) 100%
+  );
+  > * {
+    margin-right: 15px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    visibility: hidden;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      360deg,
+      #36383a 0%,
+      rgba(94, 95, 96, 0.839779) 16.02%,
+      rgba(94, 95, 96, 0) 100%
+    );
+  }
+`;
+
+const FooterImage = styled.img`
+  padding-left: 30px;
+  margin-right: 30px;
+  width: 80px;
+  border-radius: 0;
+`;
+
+const Icons = styled.div`
+  padding-top: 2vh;
+  > * {
+    margin-right: 10px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    width: 30vw;
+  }
+`;
+
+const NavList = styled.ul`
+  @media only screen and (max-width: 650px) {
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+    > * {
+      padding: 0 !important;
+    }
+  }
+`;
+
+const MobLogo = styled.img`
+  visibility: hidden;
+  width: 30px;
+  @media only screen and (max-width: 650px) {
+    visibility: visible;
+  }
+`;
