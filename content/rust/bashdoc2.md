@@ -2,7 +2,7 @@
 tag: rust
 title: Documenting User Bash Functions - Round 2
 link: https://github.com/dustinknopoff/bashdoc
-date: Oct 26, 2018
+date: 2018-10-26
 ---
 
 When I make something like [bashdoc](../../rust/bashdoc/), once the idea and way to make it happen is in my head, I work on it over and over again until it's done. And when it's something like bashdoc which outputs

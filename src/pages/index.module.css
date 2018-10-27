@@ -25,6 +25,28 @@
   font-size: 22px;
 }
 
+.main > .recent {
+  /* width: 30vw; */
+  color: #0f0f0f;
+  margin-top: 10vh;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.89);
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.main > .recent > h4,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.main > .recent > h4 {
+  padding-bottom: 10px;
+}
+
 .main > p:hover {
   background: rgba(255, 255, 255, 1);
 }
@@ -34,16 +56,25 @@
     margin-top: 15vh;
   }
 
-  .main > p {
+  .main > p,
+  .recent {
     width: 90vw;
     /* margin-left: -10vw; */
     background: rgba(255, 255, 255, 0.9);
+  }
+
+  .recent {
+    margin-top: 0;
   }
 }
 
 @media only screen and (max-width: 360px) {
   .main {
     margin-top: 20vh;
+  }
+
+  .main > .recent {
+    margin-top: 0;
   }
 }
 

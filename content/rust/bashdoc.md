@@ -2,7 +2,7 @@
 tag: rust
 title: Documenting User Bash Functions - Round 1
 link: https://github.com/dustinknopoff/bashdoc/tree/74643ae4d211d45df5d8f2b725f04aa448e2d335
-date: Oct 24, 2018
+date: 2018-10-24
 ---
 
 I believe there is a moment where all developers discover how powerful and efficient mastering the command line is. When using Finder or actually clicking on things or moving the mouse seems like so much extra work. Vim is an excellent example of this. Once you immerse yourself in the syntax of vim, if you go back to a GUI editor it feels like immense effort to actually click to go to the end of a line or the end of a document.

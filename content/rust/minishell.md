@@ -2,7 +2,7 @@
 tag: rust
 title: Building a Mini Shell in Rust
 link: https://github.com/dustinknopoff/rust-minishell
-date: Oct 16, 2018
+date: 2018-10-16
 ---
 
 > Disclaimer: I'm sure there is a much more elegant way to do this.
