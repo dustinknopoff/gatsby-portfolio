@@ -60,6 +60,8 @@ And more ideas come in:
 
 you get the gist. It goes from a quick little script to a potentially monolithic project.
 
+## What's New
+
 ```
 .
 ├── Cargo.lock
@@ -176,7 +178,7 @@ let every_doc: Vec<DocFile> = files
 
 ## Interesting tidbit
 
-Something that took a long time figure out was that you can `extern crate ..` in a mod. You have to declare it in the main file and then can call the `use` statements within the mod.
+Something that took a long time figure out was that you can't `extern crate ..` in a mod. You have to declare it in the main file and then can call the `use` statements within the mod.
 
 ## Gimme JSON
 
