@@ -45,7 +45,7 @@ export default ({ children }) => (
             description="Dustin Knopoff's portfolio of projects"
           />
         </Helmet>
-        <Header>
+        <Header as={Link} to={"/"}>
           <Credits>
             Made with <a href="https://www.gatsbyjs.org/">GatsbyJS</a> {", "}
             Image by{" "}
@@ -147,6 +147,11 @@ const Header = styled.header`
   padding-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.7);
 
+  &:hover {
+    background: rgba(255, 255, 255, 0.7);
+    border-bottom: none;
+  }
+
   @media only screen and (max-width: 650px) {
     flex-direction: row;
     justify-content: baseline;
@@ -162,6 +167,11 @@ const Header = styled.header`
   @media (prefers-color-scheme: dark) {
     background-color: rgba(54, 56, 58, 0.7);
     color: #efefef;
+
+    &:hover {
+      background: rgba(54, 56, 58, 0.7);
+      border-bottom: none;
+    }
   }
 `;
 
