@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "gatsby";
 import styles from "./layout.module.css";
 import Helmet from "react-helmet";
@@ -16,6 +16,15 @@ export default ({ children }) => (
             title
             subtitle
             pages
+          }
+        }
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                tag
+              }
+            }
           }
         }
       }

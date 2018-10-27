@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Dustin Knopoff",
     subtitle: "Computer Science/Design Major at Northeastern University",
-    pages: ["python", "bash", "javascript", "design", "rust"],
+    pages: ["python", "shell", "javascript", "design", "rust"],
     author: "Dustin Knopoff",
     description: "Projects and Information on Dustin Knopoff",
     siteUrl: "https://dustinknopoff.me"
@@ -48,7 +48,8 @@ module.exports = {
                 js: "javascript",
                 py: "python",
                 rs: "rust"
-              }
+              },
+              showLineNumbers: true
             }
           }
         ]
