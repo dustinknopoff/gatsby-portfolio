@@ -43,7 +43,7 @@ psman - cli: Open man page in Preview.app
 fop: Fuzzy search 1Password
 ```
 
-it sometimes feels like that you've put an almost excessive amount of effort in to something incredibly insignificant. Especially since this project was also a way to learn some Rust.
+it sometimes feels like that you've put an almost excessive amount of effort in to something incredibly insignificant. Especially since this project was also a way to learn some Rust and it's always harder to get results when learning at the same time.
 
 So, it becomes a question of how can I make this broader, more helpful either for a similar problem I have or for other people to use.
 
@@ -56,7 +56,7 @@ And more ideas come in:
 - "Let me expand this into a `mod`, play around with that stuff."
 - "Maybe I should make this more generic, exporting in json maybe?"
 - "Why hardcode the delimiters? Make it like a config thing."
-- "Play around with `clap`? Make it a geniune CLI."
+- "Play around with `clap`? Make it a genuine CLI."
 
 you get the gist. It goes from a quick little script to a potentially monolithic project.
 
