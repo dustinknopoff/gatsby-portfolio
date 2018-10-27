@@ -2,7 +2,7 @@
 tag: javascript
 title: Website
 link: https://github.com/dustinknopoff/gatsby-portfolio
-date: July 28, 2018
+date: 2018-07-28
 ---
 
 This website has been an idea for a long, long time. It started out as HTML written in Python using [yattag](http://www.yattag.org) which became quickly unusable. It was then migrated to using [pystache](https://github.com/defunkt/pystache) and injected JavaScript.

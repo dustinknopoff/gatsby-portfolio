@@ -2,7 +2,7 @@
 tag: python
 title: TeaCode Previewer
 link: https://github.com/dustinknopoff/teacodebundles
-date: Jul 28, 2018
+date: 2018-07-08
 ---
 
 In the slack channel for TeaCode, there is a channel `#expanders` where people can share there expanders. These come in `.tcbundle` files which look something like this:

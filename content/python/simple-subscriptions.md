@@ -2,7 +2,7 @@
 tag: python
 title: Simple Subscriptions
 link: https://github.com/dustinknopoff/py-explore/blob/master/subscriptions.py
-date: Jul 20, 2018
+date: 2018-07-20
 ---
 
 Inspired by [Bobby](http://www.bobbyapp.co), I wanted to make a very simple subscription tracker in the terminal.

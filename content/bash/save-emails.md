@@ -2,7 +2,7 @@
 tag: bash
 title: Save Emails as PDFs
 link: https://github.com/dustinknopoff/py-explore/tree/master/save-emails
-date: July 7, 2018
+date: 2018-07-07
 ---
 
 Someone posed the question of how to preserve emails on the Mac as PDFs [here](https://talk.macpowerusers.com/t/preserving-emails/4277). It was a question I was curious about and had no idea how to answer. So, I started to do my research.

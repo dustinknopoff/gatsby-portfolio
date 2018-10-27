@@ -2,7 +2,7 @@
 tag: javascript
 title: Money Buddy
 link: https://github.com/dustinknopoff/moneybuddy
-date: June 26, 2018
+date: 2018-06-26
 ---
 
 This was Jessica Holoschutz Berger and I's final project for 5D Fundamentals at Northeastern University. The concept was to emphasize the common issue in the US where customers will buy more than they can afford.

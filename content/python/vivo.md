@@ -2,7 +2,7 @@
 tag: python
 title: Shoe Scraper
 link: https://github.com/dustinknopoff/py-explore/blob/master/vivo.py
-date: May 12, 2018
+date: 2018-05-18
 ---
 
 I am a huge fan of minimal, very small sole shoes. All of [Vivo Barefoot](https://www.vivobarefoot.com/us)'s shoes fit this desire. Except that they're way out of my price range. So, why not try and learn to scrape the web?
