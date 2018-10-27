@@ -28,3 +28,10 @@ td > strong {
   font-weight: 400;
   color: gray;
 }
+
+@media (prefers-color-scheme: dark) {
+  table {
+    background-color: rgba(54, 56, 58, 0.9);
+    color: #efefef;
+  }
+}

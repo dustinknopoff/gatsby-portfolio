@@ -89,3 +89,16 @@
     margin-bottom: 20px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: rgba(54, 56, 58, 0.89);
+    color: #efefef;
+  }
+  .card:hover {
+    background: rgba(54, 56, 58, 1);
+  }
+  .title {
+    color: #8e8e8e;
+  }
+}

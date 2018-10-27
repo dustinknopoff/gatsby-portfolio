@@ -114,3 +114,21 @@ blockquote {
     height: 350px !important;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .contain {
+    background: rgba(54, 56, 58, 1);
+    color: #efefef;
+  }
+
+  .content > p > a {
+    color: #f4f4f4;
+  }
+
+  blockquote {
+    color: #f9f9f9;
+  }
+  video {
+    height: 150px !important;
+  }
+}
