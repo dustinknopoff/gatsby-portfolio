@@ -92,6 +92,7 @@ const Article = styled.article`
   word-wrap: break-word;
   line-height: 1.5;
   text-align: left;
+  width: 90%;
 
   > p > a {
     color: #0d328f;
