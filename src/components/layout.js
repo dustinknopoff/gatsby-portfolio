@@ -33,6 +33,7 @@ export default ({ children }) => (
     render={data => (
       <div>
         <Helmet>
+          <link href="https://micro.blog/dustinknopoff" rel="me" />
           <link
             rel="shortcut icon"
             type="image/png"
