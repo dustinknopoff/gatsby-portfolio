@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import styles from "./layout.module.css";
 import Helmet from "react-helmet";
@@ -48,11 +48,23 @@ export default ({ children }) => (
         </Helmet>
         <Header as={Link} to={"/"}>
           <Credits>
-            Made with <a href="https://www.gatsbyjs.org/">GatsbyJS</a> {", "}
-            Image by{" "}
-            <a href="https://unsplash.com/photos/SMJC_JJm7W4">rawpixel</a>
+            Made with{" "}
+            <a href="https://www.gatsbyjs.org/" name="gatsby-link">
+              GatsbyJS
+            </a>{" "}
             {", "}
-            and icons from <a href="https://feathericons.com">feather</a>
+            Image by{" "}
+            <a
+              href="https://unsplash.com/photos/SMJC_JJm7W4"
+              name="bg-image-link"
+            >
+              rawpixel
+            </a>
+            {", "}
+            and icons from{" "}
+            <a href="https://feathericons.com" name="icon-src-link">
+              feather
+            </a>
           </Credits>
           <nav>
             <NavList>
@@ -78,16 +90,16 @@ export default ({ children }) => (
                 className={styles.moblogo}
               />
             </Link>
-            <Obfuscate email="dustinknopoff@gmail.com">
+            <Obfuscate email="dustinknopoff@gmail.com" name="email">
               <Mail />
             </Obfuscate>
-            <a href="https://github.com/dustinknopoff">
+            <a href="https://github.com/dustinknopoff" name="github">
               <GitHub />
             </a>
-            <a href="https://www.linkedin.com/in/dustinknopoff">
+            <a href="https://www.linkedin.com/in/dustinknopoff" name="linkedin">
               <Linkedin />
             </a>
-            <Link to="rss.xml">
+            <Link to="rss.xml" name="rss-feed">
               <Rss />
             </Link>
           </Icons>
