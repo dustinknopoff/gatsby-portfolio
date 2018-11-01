@@ -20,6 +20,7 @@ export default ({ data }) => (
         recent
         as={Link}
         to={data.allMarkdownRemark.edges[0].node.fields.slug}
+        prefetch
       >
         <Headings as="h4">Most Recent Post</Headings>
         <Headings as="h6">
