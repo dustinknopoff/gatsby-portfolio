@@ -46,7 +46,7 @@ export default ({ children }) => (
             description="Dustin Knopoff's portfolio of projects"
           />
         </Helmet>
-        <Header as={Link} to={"/"}>
+        <Header>
           <Credits>
             Made with{" "}
             <a href="https://www.gatsbyjs.org/" name="gatsby-link">
