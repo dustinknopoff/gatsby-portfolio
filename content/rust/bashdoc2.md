@@ -1,6 +1,6 @@
 ---
 tag: rust
-title: Documenting User Bash Functions - Round 2
+title: Bashdoc - Round 2
 link: https://github.com/dustinknopoff/bashdoc
 date: 2018-10-26
 ---
