@@ -1,7 +1,7 @@
 ---
 tag: rust
 title: Bashdoc - Round 2
-link: https://github.com/dustinknopoff/bashdoc
+link: https://github.com/dustinknopoff/bashdoc/tree/v0.1.0
 date: 2018-10-26
 ---
 

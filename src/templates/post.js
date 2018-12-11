@@ -15,7 +15,7 @@ export default ({ data }) => {
             dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
           />
           <GitHubLink href={data.markdownRemark.frontmatter.link}>
-            Check it out!
+            To see the full source code, click here.
           </GitHubLink>
         </Container>
       </Wrapper>
