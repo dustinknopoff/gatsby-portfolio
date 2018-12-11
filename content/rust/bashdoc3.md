@@ -56,6 +56,8 @@ do_parse!(
 )
 ```
 
+The `preceded!` macro takes into 2 values, returning the value of the second if the first is found prior. The `take_until_and_consume!` macro goes through every character in a string until the passed in value, returning the result eating the passed in value (removing it from the string but not returning it).
+
 Similarly, in order to parse the parameters passed into a docstring, we use the following:
 
 ```rust
@@ -116,4 +118,4 @@ pub fn override_delims(overrides: String) -> Self {
 
 ## Conclusions
 
-It took forever to figure out
+It took forever to figure out why parsing delimiters, descriptors, and return values was not working in nom. On and off about 2 weeks. It ended up being the ordering of nom functions to be called. In the end, I feel like I wrote clever code and I'm satisfied to consider this a completed project.
