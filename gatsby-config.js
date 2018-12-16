@@ -72,6 +72,21 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-catch-links`
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `@andrew-codes/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: ["title", "tag"],
+        // How to resolve each field's value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields' values
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            tag: node => node.frontmatter.tag
+          }
+        }
+      }
+    }
   ]
 };
