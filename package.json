@@ -13,7 +13,7 @@
     "@types/react-dom": "^16.0.9",
     "babel-plugin-styled-components": "^1.8.0",
     "feather-icons": "^4.7.3",
-    "gatsby": "^2.0.22",
+    "gatsby": "^2.0.67",
     "gatsby-cli": "^2.4.5",
     "gatsby-plugin-catch-links": "^2.0.5",
     "gatsby-plugin-feed": "^2.0.8",

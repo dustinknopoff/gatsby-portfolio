@@ -250,3 +250,5 @@ and `export BASHDOC_CONFIG_PATH="${HOME}/.bashdocrc` being in a user's `.zshrc` 
 ## Wrapping it up
 
 It was a fun project and I feel like I can actually use Rust to some degree now.
+
+> Read the [part 3](../bashdoc2).

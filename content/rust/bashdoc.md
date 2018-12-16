@@ -201,3 +201,5 @@ impl AllDocs {
     }
 }
 ```
+
+> Read the [part 2](../bashdoc2).
