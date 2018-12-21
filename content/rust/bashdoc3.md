@@ -119,3 +119,5 @@ pub fn override_delims(overrides: String) -> Self {
 ## Conclusions
 
 It took forever to figure out why parsing delimiters, descriptors, and return values was not working in nom. On and off about 2 weeks. It ended up being the ordering of nom functions to be called. In the end, I feel like I wrote clever code and I'm satisfied to consider this a completed project.
+
+> EDIT: Now on [Cargo](https://www.crates.io/crates/bashdoc)
