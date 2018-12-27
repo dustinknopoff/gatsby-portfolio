@@ -25,7 +25,7 @@ export const Card = styled.div`
       margin-top: 10px;
       text-align: center;
       font-weight: 500;
-      font-size: 22px;
+      font-size: 2vmin;
       width: 30vw;
       padding: 10px;
 
@@ -40,7 +40,7 @@ export const Card = styled.div`
     css`
       text-align: center;
       font-weight: 500;
-      font-size: 22px;
+      font-size: 2vmin;
       width: 30vw;
       padding: 10px;
       margin-top: 10vh;

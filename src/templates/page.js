@@ -65,10 +65,10 @@ export const query = graphql`
 `;
 
 const Container = styled.div`
-  margin-top: 15vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 10vh;
 
   @media only screen and (max-width: 425px) {
     flex-direction: column;
@@ -90,10 +90,9 @@ const CardContent = styled.p`
 `;
 
 const PageTitle = styled.h5`
-  text-align: right;
-  margin-top: 15vh;
-  font-size: 60px;
-  margin-bottom: 0;
+  font-size: 6vmin;
+  position: fixed;
+  right: 0;
   margin-right: 10vw;
   color: #636363;
   font-family: "Courier New", Courier, monospace;
@@ -103,9 +102,11 @@ const PageTitle = styled.h5`
   }
 
   @media only screen and (max-width: 425px) {
-    margin-top: 30vh;
     color: #a0a0a0;
+    position: relative;
     text-align: left;
+    font-size: 12vmin;
+    margin-left: 10vw;
   }
 `;
 

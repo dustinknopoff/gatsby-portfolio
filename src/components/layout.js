@@ -153,7 +153,7 @@ const Header = styled.header`
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -189,7 +189,7 @@ const Header = styled.header`
 `;
 
 const Credits = styled.span`
-  font-size: 10px;
+  font-size: 1.2vmin;
   color: #3b3b3b;
   margin-top: 2vh;
   width: 15vw;
@@ -198,6 +198,7 @@ const Credits = styled.span`
     margin-top: 10px;
     margin-left: 10px;
     width: 20vw;
+    font-size: 3vmin;
   }
 
   @media (prefers-color-scheme: dark) {

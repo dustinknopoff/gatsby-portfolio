@@ -39,10 +39,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10vh;
 
   @media only screen and (max-width: 425px) {
-    margin-top: 30vh;
     margin-left: -5vw;
   }
 `;
@@ -56,7 +54,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 15vh;
-  margin-top: 10vh;
+  margin-top: 5vh;
 
   > * {
     padding-left: 2vw;
@@ -74,8 +72,12 @@ const Container = styled.div`
 `;
 
 const PostTitle = styled.h2`
-  font-size: 48px;
+  font-size: 5vmin;
   text-align: center;
+
+  @media only screen and (max-width: 425px) {
+    font-size: 8vmin;
+  }
 `;
 
 const GitHubLink = styled.a`
@@ -84,7 +86,7 @@ const GitHubLink = styled.a`
 `;
 
 const Article = styled.article`
-  font-size: 18px;
+  font-size: 2vmin;
   padding: 15px;
   align-self: center;
   overflow-wrap: break-word;
@@ -116,5 +118,9 @@ const Article = styled.article`
     > p > a {
       color: #4286f4;
     }
+  }
+
+  @media only screen and (max-width: 425px) {
+    font-size: 4vmin;
   }
 `;

@@ -97,6 +97,6 @@ const Table = styled.table`
 const Strong = styled.strong`
   margin: 10px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1vmin;
   text-align: center;
 `;
