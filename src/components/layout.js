@@ -16,7 +16,13 @@ export default ({ children }) => (
           siteMetadata {
             title
             subtitle
-            pages
+          }
+        }
+        allDirectory {
+          edges {
+            node {
+              base
+            }
           }
         }
         allMarkdownRemark {
@@ -68,17 +74,19 @@ export default ({ children }) => (
           </Credits>
           <nav>
             <NavList>
-              {data.site.siteMetadata.pages.map(elem => {
-                return (
-                  <StyledLink
-                    as={Link}
-                    to={`/${elem}`}
-                    activeClassName={styles.active}
-                    key={elem}
-                  >
-                    {elem}
-                  </StyledLink>
-                );
+              {data.allDirectory.edges.map(({ node }) => {
+                if (node.base != `content`) {
+                  return (
+                    <StyledLink
+                      as={Link}
+                      to={`/${node.base}`}
+                      activeClassName={styles.active}
+                      key={node.base}
+                    >
+                      {node.base}
+                    </StyledLink>
+                  );
+                }
               })}
             </NavList>
           </nav>

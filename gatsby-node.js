@@ -18,9 +18,11 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        site {
-          siteMetadata {
-            pages
+        allDirectory {
+          edges {
+            node {
+              base
+            }
           }
         }
         allMarkdownRemark {
@@ -34,15 +36,17 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      result.data.site.siteMetadata.pages.forEach(node => {
-        createPage({
-          path: `${node}`,
-          component: path.resolve(`./src/templates/page.js`),
-          context: {
-            // Data passed to context is available in page queries as GraphQL variables.
-            tag: node
-          }
-        });
+      result.data.allDirectory.edges.forEach(({ node }) => {
+        if (node.base != `content`) {
+          createPage({
+            path: `${node.base}`,
+            component: path.resolve(`./src/templates/page.js`),
+            context: {
+              // Data passed to context is available in page queries as GraphQL variables.
+              tag: node.base
+            }
+          });
+        }
       });
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
