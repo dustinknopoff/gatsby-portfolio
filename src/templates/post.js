@@ -1,10 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Layout from "../components/layout";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import styled from "styled-components";
+import { Card } from "../components/commonCSS";
 
 export default ({ data }) => {
+  console.log(data.allMarkdownRemark);
   return (
     <Layout>
       <Wrapper>
@@ -18,6 +20,23 @@ export default ({ data }) => {
             See the full source code
           </GitHubLink>
         </Container>
+        <h3>Recent Posts</h3>
+        <CardWrap>
+          {data.allMarkdownRemark.edges.map(({ node }) => {
+            if (
+              node.frontmatter.title !==
+                data.markdownRemark.frontmatter.title &&
+              node.frontmatter.tag === data.markdownRemark.frontmatter.tag
+            ) {
+              return (
+                <Card about as={Link} to={node.fields.slug} prefetch>
+                  <h1>{node.frontmatter.title}</h1>
+                  {node.excerpt}
+                </Card>
+              );
+            }
+          })}
+        </CardWrap>
       </Wrapper>
     </Layout>
   );
@@ -30,6 +49,26 @@ export const query = graphql`
       frontmatter {
         title
         link
+        tag
+      }
+    }
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 6
+    ) {
+      edges {
+        node {
+          frontmatter {
+            tag
+            title
+            link
+            date
+          }
+          excerpt
+          fields {
+            slug
+          }
+        }
       }
     }
   }
@@ -39,6 +78,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-bottom: 20vh;
 
   @media only screen and (max-width: 425px) {
     margin-left: -5vw;
@@ -122,5 +163,17 @@ const Article = styled.article`
 
   @media only screen and (max-width: 425px) {
     font-size: 4vmin;
+  }
+`;
+
+export const CardWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  width: 80vw;
+
+  > * {
+    margin-right: 20px;
+    min-width: 30vw;
   }
 `;

@@ -93,7 +93,7 @@ const PageTitle = styled.h5`
   font-size: 6vmin;
   position: fixed;
   right: 0;
-  margin-right: 10vw;
+  margin-right: 5vw;
   color: #636363;
   font-family: "Courier New", Courier, monospace;
 
