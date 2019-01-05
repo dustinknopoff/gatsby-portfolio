@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { Card } from "../components/commonCSS";
 
 export default ({ data }) => {
-  console.log(data.allMarkdownRemark);
   return (
     <Layout>
       <Wrapper>
