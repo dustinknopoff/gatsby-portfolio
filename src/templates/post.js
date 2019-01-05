@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Helmet from "react-helmet";
 import Layout from "../components/layout";
 import { graphql, Link } from "gatsby";
@@ -20,23 +20,30 @@ export default ({ data }) => {
             See the full source code
           </GitHubLink>
         </Container>
-        <h3>Recent Posts</h3>
-        <CardWrap>
-          {data.allMarkdownRemark.edges.map(({ node }) => {
-            if (
-              node.frontmatter.title !==
-                data.markdownRemark.frontmatter.title &&
-              node.frontmatter.tag === data.markdownRemark.frontmatter.tag
-            ) {
-              return (
-                <Card about as={Link} to={node.fields.slug} prefetch>
-                  <h1>{node.frontmatter.title}</h1>
-                  {node.excerpt}
-                </Card>
-              );
-            }
-          })}
-        </CardWrap>
+        {data.allMarkdownRemark.edges.filter(({ node }) => {
+          node.frontmatter.title !== data.markdownRemark.frontmatter.title &&
+            node.frontmatter.tag === data.markdownRemark.frontmatter.tag;
+        }).length > 0 && (
+          <Fragment>
+            <h3>Recent Posts</h3>
+            <CardWrap>
+              {data.allMarkdownRemark.edges.map(({ node }) => {
+                if (
+                  node.frontmatter.title !==
+                    data.markdownRemark.frontmatter.title &&
+                  node.frontmatter.tag === data.markdownRemark.frontmatter.tag
+                ) {
+                  return (
+                    <Card about as={Link} to={node.fields.slug} prefetch>
+                      <h1>{node.frontmatter.title}</h1>
+                      {node.excerpt}
+                    </Card>
+                  );
+                }
+              })}
+            </CardWrap>
+          </Fragment>
+        )}
       </Wrapper>
     </Layout>
   );
