@@ -9,7 +9,7 @@ import styled from "styled-components";
 export default ({ data }) => {
   return (
     <Layout>
-      <div style={{ paddingBottom: "20vh" }}>
+      <div style={{ paddingBottom: "20vh", paddingTop: "20vh" }}>
         <Helmet
           title={
             data.allMarkdownRemark.edges[0].node.frontmatter.tag
@@ -26,11 +26,10 @@ export default ({ data }) => {
         </PageTitle>
         <Container>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Link to={node.fields.slug}>
+            <Link to={node.fields.slug} style={{ borderBottom: "none" }}>
               <Card page key={node}>
                 <CardTitle>{node.frontmatter.title}</CardTitle>
                 <CardContent>{node.excerpt}</CardContent>
-                <CardLink href={node.frontmatter.link}>Link</CardLink>
               </Card>
             </Link>
           ))}
@@ -79,7 +78,11 @@ const Container = styled.div`
 const CardTitle = styled.h2`
   padding-left: 30px;
   padding-top: 20px;
-  padding-right: 10px;
+  width: 30%;
+
+  @media only screen and (max-width: 870px) {
+    width: 100%;
+  }
 `;
 
 const CardContent = styled.p`
@@ -87,12 +90,12 @@ const CardContent = styled.p`
   padding-left: 30px !important;
   padding-right: 30px !important;
   align-self: center;
+  max-width: 500px;
 `;
 
 const PageTitle = styled.h5`
   font-size: 6vmin;
-  position: fixed;
-  right: 0;
+  text-align: center;
   margin-right: 5vw;
   color: #636363;
   font-family: "Courier New", Courier, monospace;

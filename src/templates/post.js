@@ -88,6 +88,7 @@ const Wrapper = styled.div`
   margin-bottom: 20vh;
 
   @media only screen and (max-width: 425px) {
+    margin-top: 20vh;
     margin-left: -5vw;
   }
 `;

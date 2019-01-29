@@ -28,9 +28,11 @@ export const Card = styled.div`
       font-size: 2vmin;
       width: 30vw;
       padding: 10px;
+      line-height: 1.5;
 
       @media only screen and (max-width: 650px) {
         width: 90vw;
+        font-size: 4vmin;
         background: rgba(255, 255, 255, 0.9);
       }
     `};
@@ -47,6 +49,7 @@ export const Card = styled.div`
 
       @media only screen and (max-width: 650px) {
         width: 90vw;
+        font-size: 3.5vmin;
         background: rgba(255, 255, 255, 0.9);
       }
     `};
@@ -58,9 +61,9 @@ export const Card = styled.div`
       justify-content: center;
       align-items: center;
       margin-bottom: 40px;
-      width: 50vw;
+      width: 45vw;
 
-      @media only screen and (max-width: 425px) {
+      @media only screen and (max-width: 870px) {
         width: 70vw;
         margin: 10px;
         flex-direction: column;

@@ -64,7 +64,7 @@ const Container = styled.div`
   flex-direction: column;
 
   @media only screen and (max-width: 650px) {
-    margin-top: 15vh;
+    margin-top: 10vh;
   }
 `;
 

@@ -1,5 +1,5 @@
 ---
-tag: web
+tag: design
 title: Website
 link: https://github.com/dustinknopoff/gatsby-portfolio
 date: 2018-07-28

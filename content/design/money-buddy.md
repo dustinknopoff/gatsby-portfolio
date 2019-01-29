@@ -1,5 +1,5 @@
 ---
-tag: web
+tag: design
 title: Money Buddy
 link: https://github.com/dustinknopoff/moneybuddy
 date: 2018-06-26

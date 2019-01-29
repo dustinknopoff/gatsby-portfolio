@@ -183,6 +183,7 @@ const Header = styled.header`
     left: 0;
     right: 0;
     margin: 0;
+    position: fixed;
   }
 
   @media (prefers-color-scheme: dark) {
