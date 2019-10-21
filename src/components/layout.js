@@ -98,7 +98,7 @@ export default ({ children }) => (
                 className={styles.moblogo}
               />
             </Link>
-            <Obfuscate email="dustinknopoff@gmail.com" name="email">
+            <Obfuscate email="dustin@knopoff.dev" name="email">
               <Mail />
             </Obfuscate>
             <a href="https://github.com/dustinknopoff" name="github">
